@@ -1,6 +1,6 @@
-# Procedural Generation System 
+# Procedural Generation with adaptive AI 
 
-> **A procedural voxel world generation tool for Godot 4.6**  
+> **A procedural voxel world generation with adaptive AI tool for Godot 4.6**  
 > **Project is still in development. There will be incomplete systems or bugs.**
 
 This project solves the time-consuming nature of level design by providing a visual, drag-and-drop toolkit that generates fully playable worlds in seconds. It ships with working defaults out of the box: terrain, enemies, structures, while keeping deep customisation options available for those who want them.
