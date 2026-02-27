@@ -1,0 +1,235 @@
+[gd_scene format=3 uid="uid://b10b313wohi7j"]
+
+[ext_resource type="Script" uid="uid://be7qsb2s5cgbe" path="res://!ProceduralGenerator/!WorldGenerator.gd" id="1_aa14s"]
+[ext_resource type="Script" uid="uid://lmxamah3v0vj" path="res://!ProceduralGenerator/TerrainDefaults/!TerrainLayer.gd" id="2_h3ipm"]
+[ext_resource type="Script" uid="uid://cscw3oyt17wni" path="res://!ProceduralGenerator/VoxelDefaults/!VoxelConfiguration.gd" id="3_di6rr"]
+[ext_resource type="PackedScene" uid="uid://3tcg1d2ysid5" path="res://!ProceduralGenerator/Templates/TemplateVoxel.tscn" id="4_3oai2"]
+[ext_resource type="PackedScene" uid="uid://ciadnjlretggf" path="res://!ProceduralGenerator/Demo (can be removed)/Player/Player.tscn" id="7_h3ipm"]
+
+[sub_resource type="Resource" id="Resource_h3ipm"]
+script = ExtResource("2_h3ipm")
+layer_name = "Blade"
+depth_mode = 1
+min_depth = 1
+max_depth = 1
+metadata/_custom_type_script = "uid://lmxamah3v0vj"
+
+[sub_resource type="Resource" id="Resource_di6rr"]
+script = ExtResource("2_h3ipm")
+layer_name = "Handle"
+depth_mode = 1
+max_depth = 0
+metadata/_custom_type_script = "uid://lmxamah3v0vj"
+
+[sub_resource type="PrismMesh" id="PrismMesh_y16iy"]
+
+[sub_resource type="PackedScene" id="PackedScene_aa14s"]
+_bundled = {
+"base_scene": 0,
+"conn_count": 0,
+"conns": PackedInt32Array(),
+"editable_instances": [],
+"id_paths": [PackedInt32Array()],
+"names": PackedStringArray("TemplateVoxel", "MeshInstance3D", "MeshInstance3D", "transform", "mesh"),
+"node_count": 2,
+"node_ids": PackedInt32Array(1672859637, 1993466825),
+"node_paths": [NodePath(".")],
+"nodes": PackedInt32Array(-1, -1, 2147483647, 0, -1, 0, 0, 1073741824, 0, 2, 786433, -1, 2, 3, 1, 4, 2, 0),
+"variants": [ExtResource("4_3oai2"), Transform3D(0.3, 0, 0, 0, 1, 0, 0, 0, 0.1, 0, 0, 0), SubResource("PrismMesh_y16iy")],
+"version": 3
+}
+
+[sub_resource type="Resource" id="Resource_tmr34"]
+script = ExtResource("3_di6rr")
+voxel_name = "Blade1"
+voxel_scene = SubResource("PackedScene_aa14s")
+layer_names = Array[String](["Blade"])
+priority = 100
+metadata/_custom_type_script = "uid://cscw3oyt17wni"
+
+[sub_resource type="PrismMesh" id="PrismMesh_h3ipm"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cj2gc"]
+albedo_color = Color(1, 1, 0, 1)
+
+[sub_resource type="PackedScene" id="PackedScene_di6rr"]
+_bundled = {
+"base_scene": 0,
+"conn_count": 0,
+"conns": PackedInt32Array(),
+"editable_instances": [],
+"id_paths": [PackedInt32Array()],
+"names": PackedStringArray("TemplateVoxel", "MeshInstance3D", "MeshInstance3D", "transform", "mesh", "surface_material_override/0"),
+"node_count": 2,
+"node_ids": PackedInt32Array(1672859637, 1993466825),
+"node_paths": [NodePath(".")],
+"nodes": PackedInt32Array(-1, -1, 2147483647, 0, -1, 0, 0, 1073741824, 0, 2, 786433, -1, 3, 3, 1, 4, 2, 5, 3, 0),
+"variants": [ExtResource("4_3oai2"), Transform3D(0.3, 0, 0, 0, 1, 0, 0, 0, 0.1, 0, 0, 0), SubResource("PrismMesh_h3ipm"), SubResource("StandardMaterial3D_cj2gc")],
+"version": 3
+}
+
+[sub_resource type="Resource" id="Resource_ds5kg"]
+script = ExtResource("3_di6rr")
+voxel_name = "Blade2"
+voxel_scene = SubResource("PackedScene_di6rr")
+layer_names = Array[String](["Blade"])
+priority = 100
+metadata/_custom_type_script = "uid://cscw3oyt17wni"
+
+[sub_resource type="PrismMesh" id="PrismMesh_tmr34"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qc0t6"]
+albedo_color = Color(0.05490196, 0, 0.7882353, 1)
+
+[sub_resource type="PackedScene" id="PackedScene_ds5kg"]
+_bundled = {
+"base_scene": 0,
+"conn_count": 0,
+"conns": PackedInt32Array(),
+"editable_instances": [],
+"id_paths": [PackedInt32Array()],
+"names": PackedStringArray("TemplateVoxel", "MeshInstance3D", "MeshInstance3D", "transform", "mesh", "surface_material_override/0"),
+"node_count": 2,
+"node_ids": PackedInt32Array(1672859637, 1993466825),
+"node_paths": [NodePath(".")],
+"nodes": PackedInt32Array(-1, -1, 2147483647, 0, -1, 0, 0, 1073741824, 0, 2, 786433, -1, 3, 3, 1, 4, 2, 5, 3, 0),
+"variants": [ExtResource("4_3oai2"), Transform3D(0.3, 0, 0, 0, 1, 0, 0, 0, 0.1, 0, 0, 0), SubResource("PrismMesh_tmr34"), SubResource("StandardMaterial3D_qc0t6")],
+"version": 3
+}
+
+[sub_resource type="Resource" id="Resource_ja3bf"]
+script = ExtResource("3_di6rr")
+voxel_name = "Blade3"
+voxel_scene = SubResource("PackedScene_ds5kg")
+layer_names = Array[String](["Blade"])
+priority = 100
+metadata/_custom_type_script = "uid://cscw3oyt17wni"
+
+[sub_resource type="BoxMesh" id="BoxMesh_kq7vk"]
+
+[sub_resource type="PackedScene" id="PackedScene_ja3bf"]
+_bundled = {
+"base_scene": 0,
+"conn_count": 0,
+"conns": PackedInt32Array(),
+"editable_instances": [],
+"id_paths": [PackedInt32Array()],
+"names": PackedStringArray("TemplateVoxel", "MeshInstance3D", "MeshInstance3D", "transform", "mesh"),
+"node_count": 2,
+"node_ids": PackedInt32Array(1373741107, 901665497),
+"node_paths": [NodePath(".")],
+"nodes": PackedInt32Array(-1, -1, 2147483647, 0, -1, 0, 0, 1073741824, 0, 2, 786433, -1, 2, 3, 1, 4, 2, 0),
+"variants": [ExtResource("4_3oai2"), Transform3D(0.3, 0, 0, 0, 1, 0, 0, 0, 0.3, 0, 0, 0), SubResource("BoxMesh_kq7vk")],
+"version": 3
+}
+
+[sub_resource type="Resource" id="Resource_qc0t6"]
+script = ExtResource("3_di6rr")
+voxel_name = "Handle1"
+voxel_scene = SubResource("PackedScene_ja3bf")
+layer_names = Array[String](["Handle"])
+priority = 100
+metadata/_custom_type_script = "uid://cscw3oyt17wni"
+
+[sub_resource type="BoxMesh" id="BoxMesh_cplgb"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3juyf"]
+albedo_color = Color(1, 0, 1, 1)
+
+[sub_resource type="PackedScene" id="PackedScene_iflie"]
+_bundled = {
+"base_scene": 0,
+"conn_count": 0,
+"conns": PackedInt32Array(),
+"editable_instances": [],
+"id_paths": [PackedInt32Array()],
+"names": PackedStringArray("TemplateVoxel", "MeshInstance3D", "MeshInstance3D", "transform", "mesh", "surface_material_override/0"),
+"node_count": 2,
+"node_ids": PackedInt32Array(1373741107, 901665497),
+"node_paths": [NodePath(".")],
+"nodes": PackedInt32Array(-1, -1, 2147483647, 0, -1, 0, 0, 1073741824, 0, 2, 786433, -1, 3, 3, 1, 4, 2, 5, 3, 0),
+"variants": [ExtResource("4_3oai2"), Transform3D(0.3, 0, 0, 0, 1, 0, 0, 0, 0.3, 0, 0, 0), SubResource("BoxMesh_cplgb"), SubResource("StandardMaterial3D_3juyf")],
+"version": 3
+}
+
+[sub_resource type="Resource" id="Resource_cplgb"]
+script = ExtResource("3_di6rr")
+voxel_name = "Handle2"
+voxel_scene = SubResource("PackedScene_iflie")
+layer_names = Array[String](["Handle"])
+priority = 100
+metadata/_custom_type_script = "uid://cscw3oyt17wni"
+
+[sub_resource type="BoxMesh" id="BoxMesh_uwm3w"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dlxr7"]
+albedo_color = Color(0.078431375, 1, 1, 1)
+
+[sub_resource type="PackedScene" id="PackedScene_3ptx5"]
+_bundled = {
+"base_scene": 0,
+"conn_count": 0,
+"conns": PackedInt32Array(),
+"editable_instances": [],
+"id_paths": [PackedInt32Array()],
+"names": PackedStringArray("TemplateVoxel", "MeshInstance3D", "MeshInstance3D", "transform", "mesh", "surface_material_override/0"),
+"node_count": 2,
+"node_ids": PackedInt32Array(1373741107, 901665497),
+"node_paths": [NodePath(".")],
+"nodes": PackedInt32Array(-1, -1, 2147483647, 0, -1, 0, 0, 1073741824, 0, 2, 786433, -1, 3, 3, 1, 4, 2, 5, 3, 0),
+"variants": [ExtResource("4_3oai2"), Transform3D(0.3, 0, 0, 0, 1, 0, 0, 0, 0.3, 0, 0, 0), SubResource("BoxMesh_uwm3w"), SubResource("StandardMaterial3D_dlxr7")],
+"version": 3
+}
+
+[sub_resource type="Resource" id="Resource_iflie"]
+script = ExtResource("3_di6rr")
+voxel_name = "Handle3"
+voxel_scene = SubResource("PackedScene_3ptx5")
+layer_names = Array[String](["Handle"])
+priority = 100
+metadata/_custom_type_script = "uid://cscw3oyt17wni"
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_h3ipm"]
+sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+energy_multiplier = 1.05
+
+[sub_resource type="Sky" id="Sky_kwlfk"]
+sky_material = SubResource("ProceduralSkyMaterial_h3ipm")
+
+[sub_resource type="Environment" id="Environment_di6rr"]
+background_mode = 2
+sky = SubResource("Sky_kwlfk")
+fog_density = 0.008
+fog_sky_affect = 0.8
+fog_height_density = 100.0
+
+[node name="ItemGenerator" type="Node3D" unique_id=714220866]
+script = ExtResource("1_aa14s")
+loadingScreen = false
+world_size_x = 4
+world_size_z = 4
+world_size_y = 2
+chunk_size_x = 1
+chunk_size_z = 1
+chunk_size_y = 2
+terrain_layers = Array[ExtResource("2_h3ipm")]([SubResource("Resource_h3ipm"), SubResource("Resource_di6rr")])
+voxel_configurations = Array[ExtResource("3_di6rr")]([SubResource("Resource_tmr34"), SubResource("Resource_ds5kg"), SubResource("Resource_ja3bf"), SubResource("Resource_qc0t6"), SubResource("Resource_cplgb"), SubResource("Resource_iflie")])
+
+[node name="Player" parent="." unique_id=1686282588 instance=ExtResource("7_h3ipm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2.192209)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1281705657]
+environment = SubResource("Environment_di6rr")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1552632568]
+transform = Transform3D(-0.50000006, -0.8660254, -3.7855173e-08, 0, -4.371139e-08, 1, -0.8660254, 0.50000006, 2.1855696e-08, 0, 0, 0)
+light_energy = 1.2
+shadow_enabled = true
+directional_shadow_max_distance = 1.0
+
+[node name="Ground" type="CSGBox3D" parent="." unique_id=237234751]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -3.168097, 0)
+visible = false
+use_collision = true
+size = Vector3(200, 1, 200)

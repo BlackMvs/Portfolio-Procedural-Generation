@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://ciadnjlretggf"]
+
+[ext_resource type="Script" uid="uid://cnttrrjts4t5x" path="res://!ProceduralGenerator/Demo (can be removed)/Player/Player.gd" id="1_3qydi"]
+[ext_resource type="PackedScene" uid="uid://cneii65pfg1iw" path="res://Menu/PlayerUI/PlayerUI.tscn" id="2_q3lat"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_l2ndj"]
+radius = 0.40039063
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_3qydi"]
+
+[node name="Player" type="CharacterBody3D" unique_id=283597622 groups=["Player"]]
+script = ExtResource("1_3qydi")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1650911326]
+shape = SubResource("CapsuleShape3D_l2ndj")
+disabled = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1311476543]
+transform = Transform3D(0.8, 0, 0, 0, 1, 0, 0, 0, 0.8, 0, 0, 0)
+visible = false
+mesh = SubResource("CapsuleMesh_3qydi")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=835167535]
+transform = Transform3D(0.4678632, 0, 0, 0, 0.4678632, 0, 0, 0, 0.4678632, 0.00696769, 0.64973193, -0.46525317)
+visible = false
+size = Vector3(0.5258789, 0.26794434, 0.67041016)
+
+[node name="CameraPivot" type="Node3D" parent="." unique_id=1645467774]
+unique_name_in_owner = true
+
+[node name="Camera" type="Camera3D" parent="CameraPivot" unique_id=1739066344]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 0.96988904, 0.2435473, 0, -0.2435473, 0.96988904, 0.63950443, 1.8660896, 3.163864)
+
+[node name="PlayerUi" parent="." unique_id=233537943 instance=ExtResource("2_q3lat")]
+unique_name_in_owner = true
+visible = false

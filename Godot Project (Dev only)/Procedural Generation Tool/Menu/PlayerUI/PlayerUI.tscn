@@ -1,0 +1,184 @@
+[gd_scene format=3 uid="uid://cneii65pfg1iw"]
+
+[ext_resource type="Script" uid="uid://dw1oaifavplj6" path="res://Menu/PlayerUI/PlayerUI.gd" id="1_2686l"]
+[ext_resource type="LabelSettings" uid="uid://bm1hcuuvqsctu" path="res://LabelSettings/NormalTextLabel.tres" id="2_b5khm"]
+[ext_resource type="Script" uid="uid://b7l6412s3qjoj" path="res://Menu/PlayerUI/PerformanceMonitor.gd" id="3_h7udg"]
+
+[node name="PlayerUi" type="CanvasLayer" unique_id=654611062]
+process_mode = 3
+script = ExtResource("1_2686l")
+
+[node name="TopContainer" type="PanelContainer" parent="." unique_id=2041666423]
+anchors_preset = 10
+anchor_right = 1.0
+grow_horizontal = 2
+size_flags_horizontal = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="TopContainer" unique_id=1549735672]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="MenuBtn" type="Button" parent="TopContainer/HBoxContainer" unique_id=212979127]
+layout_mode = 2
+focus_mode = 0
+theme_override_font_sizes/font_size = 20
+text = "Menu"
+
+[node name="VSeparator1" type="VSeparator" parent="TopContainer/HBoxContainer" unique_id=1571426864]
+layout_mode = 2
+
+[node name="ControlsContainer1" type="VBoxContainer" parent="TopContainer/HBoxContainer" unique_id=1783487080]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="TopContainer/HBoxContainer/ControlsContainer1" unique_id=1590234239]
+layout_mode = 2
+text = "WASD - Move "
+
+[node name="Label3" type="Label" parent="TopContainer/HBoxContainer/ControlsContainer1" unique_id=1791486443]
+layout_mode = 2
+text = "Num9 - Fly mode on/off"
+
+[node name="VSeparator2" type="VSeparator" parent="TopContainer/HBoxContainer" unique_id=477368882]
+layout_mode = 2
+
+[node name="ControlsContainer2" type="VBoxContainer" parent="TopContainer/HBoxContainer" unique_id=170352967]
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="TopContainer/HBoxContainer/ControlsContainer2" unique_id=1143915540]
+layout_mode = 2
+text = "Space - Jump/Fly up"
+
+[node name="Label" type="Label" parent="TopContainer/HBoxContainer/ControlsContainer2" unique_id=2084018532]
+layout_mode = 2
+text = "Ctrl - Fly down"
+
+[node name="VSeparator3" type="VSeparator" parent="TopContainer/HBoxContainer" unique_id=1921243459]
+layout_mode = 2
+
+[node name="ControlsContainer3" type="VBoxContainer" parent="TopContainer/HBoxContainer" unique_id=287835770]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="TopContainer/HBoxContainer/ControlsContainer3" unique_id=1605324460]
+layout_mode = 2
+text = "Esc - Menu"
+
+[node name="Label2" type="Label" parent="TopContainer/HBoxContainer/ControlsContainer3" unique_id=544537479]
+layout_mode = 2
+text = "Enter - Console view"
+
+[node name="VSeparator4" type="VSeparator" parent="TopContainer/HBoxContainer" unique_id=530138234]
+layout_mode = 2
+
+[node name="ControlsContainer4" type="VBoxContainer" parent="TopContainer/HBoxContainer" unique_id=1633771261]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="TopContainer/HBoxContainer/ControlsContainer4" unique_id=1207284279]
+layout_mode = 2
+text = "Alt - View mouse"
+
+[node name="Label2" type="Label" parent="TopContainer/HBoxContainer/ControlsContainer4" unique_id=320130787]
+layout_mode = 2
+
+[node name="VSeparator5" type="VSeparator" parent="TopContainer/HBoxContainer" unique_id=646722910]
+layout_mode = 2
+
+[node name="TogglesMenu" type="VBoxContainer" parent="TopContainer/HBoxContainer" unique_id=945144382]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="FlyToggleLbl" type="Label" parent="TopContainer/HBoxContainer/TogglesMenu" unique_id=225219123]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 8
+theme_override_colors/font_color = Color(0.95445794, 3.6098063e-06, 1.347661e-06, 1)
+text = "Flying: x"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MenuContainer" type="PanelContainer" parent="." unique_id=911161277]
+unique_name_in_owner = true
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Items" type="VBoxContainer" parent="MenuContainer" unique_id=1734987265]
+layout_mode = 2
+theme_override_constants/separation = 15
+
+[node name="MenuTitleLbl" type="Label" parent="MenuContainer/Items" unique_id=2064933390]
+layout_mode = 2
+text = "Menu Options"
+label_settings = ExtResource("2_b5khm")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Buttons" type="VBoxContainer" parent="MenuContainer/Items" unique_id=1305829511]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="ResumeBtn" type="Button" parent="MenuContainer/Items/Buttons" unique_id=382730998]
+layout_mode = 2
+focus_mode = 0
+theme_override_font_sizes/font_size = 20
+text = "Resume"
+
+[node name="ExitBtn" type="Button" parent="MenuContainer/Items/Buttons" unique_id=1738042609]
+layout_mode = 2
+focus_mode = 0
+theme_override_font_sizes/font_size = 20
+text = "Exit"
+
+[node name="ConsoleContainer" type="PanelContainer" parent="." unique_id=1536713170]
+modulate = Color(1, 1, 1, 0.80784315)
+self_modulate = Color(1, 1, 1, 0.50980395)
+custom_minimum_size = Vector2(350, 100)
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -40.0
+offset_right = 40.0
+grow_vertical = 0
+
+[node name="ConsoleRichLabel" type="RichTextLabel" parent="ConsoleContainer" unique_id=2117372812]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/normal_font_size = 14
+theme_override_font_sizes/bold_font_size = 14
+theme_override_font_sizes/bold_italics_font_size = 14
+theme_override_font_sizes/italics_font_size = 14
+theme_override_font_sizes/mono_font_size = 14
+text = "Console"
+fit_content = true
+
+[node name="PerformanceMonitorContainer" type="PanelContainer" parent="." unique_id=989235276]
+modulate = Color(1, 1, 1, 0.80784315)
+self_modulate = Color(1, 1, 1, 0.50980395)
+custom_minimum_size = Vector2(350, 100)
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -350.0
+offset_top = -100.0
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="MonitorRichLabel" type="RichTextLabel" parent="PerformanceMonitorContainer" unique_id=1596944545]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(350, 50)
+layout_mode = 2
+text = "Performance monitor "
+script = ExtResource("3_h7udg")
+
+[connection signal="pressed" from="TopContainer/HBoxContainer/MenuBtn" to="." method="_on_menu_btn_pressed"]
+[connection signal="pressed" from="MenuContainer/Items/Buttons/ResumeBtn" to="." method="_on_resume_btn_pressed"]
+[connection signal="pressed" from="MenuContainer/Items/Buttons/ExitBtn" to="." method="_on_exit_btn_pressed"]

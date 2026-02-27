@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="VoxelConfiguration" format=3 uid="uid://bynlt0bc05y5h"]
+
+[ext_resource type="Script" uid="uid://cscw3oyt17wni" path="res://!ProceduralGenerator/VoxelDefaults/!VoxelConfiguration.gd" id="1_22hux"]
+[ext_resource type="PackedScene" uid="uid://p5ygbaquvvek" path="res://!ProceduralGenerator/VoxelDefaults/Grass_01_Scene.tscn" id="2_cl1ke"]
+
+[resource]
+script = ExtResource("1_22hux")
+voxel_name = "Grass_01"
+voxel_scene = ExtResource("2_cl1ke")
+layer_names = Array[String](["Surface"])
+metadata/_custom_type_script = "uid://cscw3oyt17wni"

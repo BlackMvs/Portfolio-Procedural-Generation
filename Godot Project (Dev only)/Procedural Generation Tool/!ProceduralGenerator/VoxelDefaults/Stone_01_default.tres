@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="VoxelConfiguration" format=3 uid="uid://cl1pe5uait7cd"]
+
+[ext_resource type="Script" uid="uid://cscw3oyt17wni" path="res://!ProceduralGenerator/VoxelDefaults/!VoxelConfiguration.gd" id="1_f5wg0"]
+[ext_resource type="PackedScene" uid="uid://dj36gmfvwv5j1" path="res://!ProceduralGenerator/VoxelDefaults/Stone_01_Scene.tscn" id="2_hwsq5"]
+
+[resource]
+script = ExtResource("1_f5wg0")
+voxel_name = "Stone_01"
+voxel_scene = ExtResource("2_hwsq5")
+layer_names = Array[String](["Deep"])
+metadata/_custom_type_script = "uid://cscw3oyt17wni"

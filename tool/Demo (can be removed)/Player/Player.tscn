@@ -1,0 +1,30 @@
+[gd_scene load_steps=4 format=3 uid="uid://ciadnjlretggf"]
+
+[ext_resource type="Script" uid="uid://cnttrrjts4t5x" path="res://tool/Demo (can be removed)/Player/Player.gd" id="1_3qydi"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_l2ndj"]
+radius = 0.40039063
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_3qydi"]
+
+[node name="Player" type="CharacterBody3D" groups=["Player"]]
+script = ExtResource("1_3qydi")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("CapsuleShape3D_l2ndj")
+disabled = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.8, 0, 0, 0, 1, 0, 0, 0, 0.8, 0, 0, 0)
+mesh = SubResource("CapsuleMesh_3qydi")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="."]
+transform = Transform3D(0.4678632, 0, 0, 0, 0.4678632, 0, 0, 0, 0.4678632, 0.00696769, 0.64973193, -0.46525317)
+size = Vector3(0.5258789, 0.26794434, 0.67041016)
+
+[node name="CameraPivot" type="Node3D" parent="."]
+unique_name_in_owner = true
+
+[node name="Camera" type="Camera3D" parent="CameraPivot"]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 0.96988904, 0.2435473, 0, -0.2435473, 0.96988904, 0.63950443, 1.8660896, 3.163864)

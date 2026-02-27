@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://jchwvfq88d1u"]
+
+[ext_resource type="Script" uid="uid://dcq8iin78iri7" path="res://!ProceduralGenerator/EnemyDefaults/DefaultScenesResources/!EnemyController.gd" id="1_u1xlb"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_u1xlb"]
+radius = 0.40039063
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_6jw85"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_oxh77"]
+albedo_color = Color(1, 0, 0, 1)
+
+[node name="Node3D" type="CharacterBody3D" unique_id=1539086999]
+script = ExtResource("1_u1xlb")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1400368010]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.0105436, 0)
+shape = SubResource("CapsuleShape3D_u1xlb")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1952871471]
+transform = Transform3D(0.8, 0, 0, 0, 1, 0, 0, 0, 0.8, 0, 1.0105436, 0)
+mesh = SubResource("CapsuleMesh_6jw85")
+surface_material_override/0 = SubResource("StandardMaterial3D_oxh77")
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="." unique_id=1918917118]

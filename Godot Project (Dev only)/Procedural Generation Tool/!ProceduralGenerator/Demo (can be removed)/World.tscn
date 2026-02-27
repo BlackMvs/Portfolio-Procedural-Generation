@@ -1,0 +1,83 @@
+[gd_scene format=3 uid="uid://csdy80idixfvd"]
+
+[ext_resource type="Script" uid="uid://be7qsb2s5cgbe" path="res://!ProceduralGenerator/!WorldGenerator.gd" id="1_rryq1"]
+[ext_resource type="Script" uid="uid://cscw3oyt17wni" path="res://!ProceduralGenerator/VoxelDefaults/!VoxelConfiguration.gd" id="2_61nrg"]
+[ext_resource type="Resource" uid="uid://bynlt0bc05y5h" path="res://!ProceduralGenerator/VoxelDefaults/Grass_01_default.tres" id="3_edgwv"]
+[ext_resource type="Resource" uid="uid://c0hjwq1dswnsj" path="res://!ProceduralGenerator/VoxelDefaults/Dirt_01_default.tres" id="4_fttym"]
+[ext_resource type="Resource" uid="uid://cl1pe5uait7cd" path="res://!ProceduralGenerator/VoxelDefaults/Stone_01_default.tres" id="5_u1ijs"]
+[ext_resource type="PackedScene" uid="uid://cmpu2cdrjmais" path="res://Blocks/DemoAssets/Ore-Gold.tscn" id="6_gv8q1"]
+[ext_resource type="Script" uid="uid://2wcy0nki2lqo" path="res://!ProceduralGenerator/EnemyDefaults/!EnemyConfiguration.gd" id="7_0dt32"]
+[ext_resource type="PackedScene" uid="uid://jchwvfq88d1u" path="res://!ProceduralGenerator/EnemyDefaults/DefaultScenesResources/BasicEnemy.tscn" id="8_mpmf0"]
+[ext_resource type="PackedScene" uid="uid://ciadnjlretggf" path="res://!ProceduralGenerator/Demo (can be removed)/Player/Player.tscn" id="9_gpyvi"]
+
+[sub_resource type="Resource" id="Resource_4vu5a"]
+script = ExtResource("2_61nrg")
+voxel_name = "GoldOre"
+voxel_scene = ExtResource("6_gv8q1")
+layer_names = Array[String](["Surface"])
+spawn_chance = 0.2
+metadata/_custom_type_script = "uid://cscw3oyt17wni"
+
+[sub_resource type="Resource" id="Resource_2pqjq"]
+script = ExtResource("7_0dt32")
+enemy_name = "BasicEnemy_1"
+enemy_scene = ExtResource("8_mpmf0")
+chunks_per_group = 1
+can_patrol = true
+patrol_speed = 20.0
+metadata/_custom_type_script = "uid://2wcy0nki2lqo"
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_75354"]
+sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+energy_multiplier = 1.05
+
+[sub_resource type="Sky" id="Sky_2pqjq"]
+sky_material = SubResource("ProceduralSkyMaterial_75354")
+
+[sub_resource type="Environment" id="Environment_s4lld"]
+background_mode = 2
+sky = SubResource("Sky_2pqjq")
+fog_density = 0.008
+fog_sky_affect = 0.8
+fog_height_density = 100.0
+volumetric_fog_enabled = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bcbcq"]
+vertex_color_use_as_albedo = true
+
+[sub_resource type="BoxMesh" id="BoxMesh_js7pq"]
+material = SubResource("StandardMaterial3D_bcbcq")
+
+[sub_resource type="MultiMesh" id="MultiMesh_eu7l1"]
+transform_format = 1
+use_colors = true
+mesh = SubResource("BoxMesh_js7pq")
+
+[node name="World" type="Node3D" unique_id=23847232 node_paths=PackedStringArray("chaseTarget")]
+script = ExtResource("1_rryq1")
+visibilityRange = false
+voxel_configurations = Array[ExtResource("2_61nrg")]([ExtResource("3_edgwv"), ExtResource("4_fttym"), ExtResource("5_u1ijs"), SubResource("Resource_4vu5a")])
+generateEnemies = true
+chaseTarget = NodePath("Player")
+enemy_configurations = Array[ExtResource("7_0dt32")]([SubResource("Resource_2pqjq")])
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=2120577290]
+environment = SubResource("Environment_s4lld")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=276339332]
+transform = Transform3D(-0.50000006, -0.8660254, -3.7855173e-08, 0, -4.371139e-08, 1, -0.8660254, 0.50000006, 2.1855696e-08, 0, 0, 0)
+light_energy = 1.2
+shadow_enabled = true
+directional_shadow_max_distance = 1.0
+
+[node name="Player" parent="." unique_id=1637124995 instance=ExtResource("9_gpyvi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 34, 16)
+
+[node name="Ground" type="CSGBox3D" parent="." unique_id=1257810184]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
+use_collision = true
+size = Vector3(200, 1, 200)
+
+[node name="MultiMeshInstance3D" type="MultiMeshInstance3D" parent="." unique_id=1825189438]
+multimesh = SubResource("MultiMesh_eu7l1")

@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://dcds21mqb1ljw"]
+
+[ext_resource type="PackedScene" uid="uid://bgm80vj6jtyej" path="res://!ProceduralGenerator/Assets/SwordAssets/Handle3.glb" id="1_017ad"]
+
+[node name="Handle32" unique_id=865195889 instance=ExtResource("1_017ad")]

@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://dlcby0c6haa3c"]
+
+[ext_resource type="PackedScene" uid="uid://bovgatw81n5wy" path="res://!ProceduralGenerator/Assets/SwordAssets/TopBlade2.glb" id="1_dyfe0"]
+
+[node name="TopBlade22" unique_id=689521744 instance=ExtResource("1_dyfe0")]

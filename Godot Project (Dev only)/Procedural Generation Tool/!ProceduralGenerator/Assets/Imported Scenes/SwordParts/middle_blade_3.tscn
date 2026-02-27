@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://7lan2eh61le4"]
+
+[ext_resource type="PackedScene" uid="uid://30q54ch3redc" path="res://!ProceduralGenerator/Assets/SwordAssets/MiddleBlade3.glb" id="1_yl28b"]
+
+[node name="MiddleBlade32" unique_id=1194853634 instance=ExtResource("1_yl28b")]

@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://dj36gmfvwv5j1"]
+
+[ext_resource type="PackedScene" uid="uid://3tcg1d2ysid5" path="res://!ProceduralGenerator/Templates/TemplateVoxel.tscn" id="1_sxq8h"]
+[ext_resource type="PackedScene" uid="uid://ddg4kr48h00d4" path="res://!ProceduralGenerator/Assets/Imported Scenes/stone_2.tscn" id="2_y6s3r"]
+
+[node name="Stone_01" unique_id=1464338481 instance=ExtResource("1_sxq8h")]
+
+[node name="stone2" parent="." index="2" unique_id=1360516238 instance=ExtResource("2_y6s3r")]
+transform = Transform3D(0.51, 0, 0, 0, 0.51, 0, 0, 0, 0.51, 0, 0, 0)

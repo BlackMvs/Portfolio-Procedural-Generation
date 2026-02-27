@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="TerrainLayer" format=3 uid="uid://coinmj0ey1qjd"]
+
+[ext_resource type="Script" uid="uid://lmxamah3v0vj" path="res://!ProceduralGenerator/TerrainDefaults/!TerrainLayer.gd" id="1_yl1lt"]
+
+[resource]
+script = ExtResource("1_yl1lt")
+layer_name = "Subsurface"
+min_depth = 1
+max_depth = 4
+metadata/_custom_type_script = "uid://lmxamah3v0vj"

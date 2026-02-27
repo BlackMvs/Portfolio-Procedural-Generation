@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://p5ygbaquvvek"]
+
+[ext_resource type="PackedScene" uid="uid://3tcg1d2ysid5" path="res://!ProceduralGenerator/Templates/TemplateVoxel.tscn" id="1_k6od5"]
+[ext_resource type="PackedScene" uid="uid://sr2np0vfngot" path="res://!ProceduralGenerator/Assets/Imported Scenes/dirt_with_grass_2.tscn" id="2_akb3m"]
+
+[node name="Grass_01" unique_id=1602493739 instance=ExtResource("1_k6od5")]
+
+[node name="dirt_with_grass2" parent="." index="2" unique_id=277507818 instance=ExtResource("2_akb3m")]
+transform = Transform3D(0.51, 0, 0, 0, 0.51, 0, 0, 0, 0.51, 0, 0, 0)
+
+[editable path="dirt_with_grass2"]

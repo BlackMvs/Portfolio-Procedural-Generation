@@ -1,0 +1,210 @@
+[gd_scene format=3 uid="uid://5qw5f1usj1jo"]
+
+[ext_resource type="Script" uid="uid://iih6d1twfxra" path="res://Menu/MainMenu/MainMenu.gd" id="1_e1xpn"]
+[ext_resource type="LabelSettings" uid="uid://bm1hcuuvqsctu" path="res://LabelSettings/NormalTextLabel.tres" id="2_swd6r"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_eoq7w"]
+font_size = 32
+
+[node name="MainMenu" type="Control" unique_id=553291218]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_e1xpn")
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=1731846485]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer" unique_id=1284496132]
+layout_mode = 2
+
+[node name="TitleLbl" type="Label" parent="PanelContainer/VBoxContainer" unique_id=182074525]
+layout_mode = 2
+text = "Main Menu"
+label_settings = SubResource("LabelSettings_eoq7w")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HSeparator4" type="HSeparator" parent="PanelContainer/VBoxContainer" unique_id=1788578000]
+layout_mode = 2
+theme_override_constants/separation = 30
+
+[node name="CurrentLbl" type="Label" parent="PanelContainer/VBoxContainer" unique_id=572207319]
+layout_mode = 2
+text = "Current Seed"
+label_settings = ExtResource("2_swd6r")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CurrentLineEdit" type="LineEdit" parent="PanelContainer/VBoxContainer" unique_id=2083229761]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 24
+alignment = 1
+editable = false
+
+[node name="HSeparator" type="HSeparator" parent="PanelContainer/VBoxContainer" unique_id=189172339]
+layout_mode = 2
+theme_override_constants/separation = 30
+
+[node name="SelectSeeds" type="Label" parent="PanelContainer/VBoxContainer" unique_id=1991209188]
+layout_mode = 2
+text = "Select Seeds"
+label_settings = ExtResource("2_swd6r")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SelectSeedsContainer" type="HBoxContainer" parent="PanelContainer/VBoxContainer" unique_id=1592464031]
+layout_mode = 2
+alignment = 1
+
+[node name="SelectSeed1" type="VBoxContainer" parent="PanelContainer/VBoxContainer/SelectSeedsContainer" unique_id=1787049054]
+layout_mode = 2
+
+[node name="SeedSelectLineEdit" type="LineEdit" parent="PanelContainer/VBoxContainer/SelectSeedsContainer/SelectSeed1" unique_id=673334751]
+custom_minimum_size = Vector2(220, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 24
+alignment = 1
+editable = false
+
+[node name="SelectSeed" type="Button" parent="PanelContainer/VBoxContainer/SelectSeedsContainer/SelectSeed1" unique_id=1745326093]
+layout_mode = 2
+focus_mode = 0
+theme_override_font_sizes/font_size = 24
+text = "Select Seed"
+
+[node name="SelectSeed2" type="VBoxContainer" parent="PanelContainer/VBoxContainer/SelectSeedsContainer" unique_id=305772409]
+layout_mode = 2
+
+[node name="SeedSelectLineEdit" type="LineEdit" parent="PanelContainer/VBoxContainer/SelectSeedsContainer/SelectSeed2" unique_id=439718119]
+custom_minimum_size = Vector2(220, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 24
+alignment = 1
+editable = false
+
+[node name="SelectSeed" type="Button" parent="PanelContainer/VBoxContainer/SelectSeedsContainer/SelectSeed2" unique_id=1148709989]
+layout_mode = 2
+focus_mode = 0
+theme_override_font_sizes/font_size = 24
+text = "Select Seed"
+
+[node name="SelectSeed3" type="VBoxContainer" parent="PanelContainer/VBoxContainer/SelectSeedsContainer" unique_id=1557958271]
+layout_mode = 2
+
+[node name="SeedSelectLineEdit" type="LineEdit" parent="PanelContainer/VBoxContainer/SelectSeedsContainer/SelectSeed3" unique_id=1369515489]
+custom_minimum_size = Vector2(220, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 24
+alignment = 1
+editable = false
+
+[node name="SelectSeed" type="Button" parent="PanelContainer/VBoxContainer/SelectSeedsContainer/SelectSeed3" unique_id=142351436]
+layout_mode = 2
+focus_mode = 0
+theme_override_font_sizes/font_size = 24
+text = "Select Seed"
+
+[node name="SelectSeed4" type="VBoxContainer" parent="PanelContainer/VBoxContainer/SelectSeedsContainer" unique_id=610898344]
+layout_mode = 2
+
+[node name="SeedSelectLineEdit" type="LineEdit" parent="PanelContainer/VBoxContainer/SelectSeedsContainer/SelectSeed4" unique_id=956821458]
+custom_minimum_size = Vector2(220, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 24
+alignment = 1
+editable = false
+
+[node name="SelectSeed" type="Button" parent="PanelContainer/VBoxContainer/SelectSeedsContainer/SelectSeed4" unique_id=1815318445]
+layout_mode = 2
+focus_mode = 0
+theme_override_font_sizes/font_size = 24
+text = "Select Seed"
+
+[node name="SelectSeed5" type="VBoxContainer" parent="PanelContainer/VBoxContainer/SelectSeedsContainer" unique_id=1353043665]
+layout_mode = 2
+
+[node name="SeedSelectLineEdit" type="LineEdit" parent="PanelContainer/VBoxContainer/SelectSeedsContainer/SelectSeed5" unique_id=416063859]
+custom_minimum_size = Vector2(220, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 24
+alignment = 1
+editable = false
+
+[node name="SelectSeed" type="Button" parent="PanelContainer/VBoxContainer/SelectSeedsContainer/SelectSeed5" unique_id=815519569]
+layout_mode = 2
+focus_mode = 0
+theme_override_font_sizes/font_size = 24
+text = "Select Seed"
+
+[node name="HSeparator3" type="HSeparator" parent="PanelContainer/VBoxContainer" unique_id=83290181]
+layout_mode = 2
+theme_override_constants/separation = 30
+
+[node name="CustomLbl" type="Label" parent="PanelContainer/VBoxContainer" unique_id=1470516702]
+layout_mode = 2
+text = "Custom Seed"
+label_settings = ExtResource("2_swd6r")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/VBoxContainer" unique_id=236720472]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="CustomLineEdit" type="LineEdit" parent="PanelContainer/VBoxContainer/VBoxContainer" unique_id=1422325504]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 24
+placeholder_text = "Add custom seed"
+alignment = 1
+max_length = 7
+clear_button_enabled = true
+
+[node name="RandomSeedBtn" type="Button" parent="PanelContainer/VBoxContainer/VBoxContainer" unique_id=1559131449]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 24
+text = "Generate random seed
+"
+
+[node name="HSeparator2" type="HSeparator" parent="PanelContainer/VBoxContainer" unique_id=498898246]
+layout_mode = 2
+theme_override_constants/separation = 30
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/VBoxContainer" unique_id=823548676]
+layout_mode = 2
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="StartGameBtn" type="Button" parent="PanelContainer/VBoxContainer/HBoxContainer" unique_id=410354862]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Start Game"
+
+[connection signal="pressed" from="PanelContainer/VBoxContainer/SelectSeedsContainer/SelectSeed1/SelectSeed" to="." method="_on_select_seed_pressed" binds= [0]]
+[connection signal="pressed" from="PanelContainer/VBoxContainer/SelectSeedsContainer/SelectSeed2/SelectSeed" to="." method="_on_select_seed_pressed" binds= [1]]
+[connection signal="pressed" from="PanelContainer/VBoxContainer/SelectSeedsContainer/SelectSeed3/SelectSeed" to="." method="_on_select_seed_pressed" binds= [2]]
+[connection signal="pressed" from="PanelContainer/VBoxContainer/SelectSeedsContainer/SelectSeed4/SelectSeed" to="." method="_on_select_seed_pressed" binds= [3]]
+[connection signal="pressed" from="PanelContainer/VBoxContainer/SelectSeedsContainer/SelectSeed5/SelectSeed" to="." method="_on_select_seed_pressed" binds= [4]]
+[connection signal="pressed" from="PanelContainer/VBoxContainer/VBoxContainer/RandomSeedBtn" to="." method="_on_random_seed_btn_pressed"]
+[connection signal="pressed" from="PanelContainer/VBoxContainer/HBoxContainer/StartGameBtn" to="." method="_on_start_game_btn_pressed"]

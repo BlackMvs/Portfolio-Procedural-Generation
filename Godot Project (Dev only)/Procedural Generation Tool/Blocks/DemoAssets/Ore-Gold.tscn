@@ -1,0 +1,26 @@
+[gd_scene load_steps=6 format=3 uid="uid://cmpu2cdrjmais"]
+
+[ext_resource type="PackedScene" uid="uid://3tcg1d2ysid5" path="res://!ProceduralGenerator/Templates/TemplateVoxel.tscn" id="1_if18k"]
+[ext_resource type="Script" uid="uid://c37ld8706n86y" path="res://Blocks/DemoAssets/ore_gold.gd" id="2_5tusr"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_if18k"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5tusr"]
+albedo_color = Color(1, 1, 0, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_c2res"]
+size = Vector3(1.01, 1.01, 1.01)
+
+[node name="GoldOre" instance=ExtResource("1_if18k")]
+script = ExtResource("2_5tusr")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." index="2"]
+mesh = SubResource("BoxMesh_if18k")
+surface_material_override/0 = SubResource("StandardMaterial3D_5tusr")
+
+[node name="Area3D" type="Area3D" parent="." index="3"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" index="0"]
+shape = SubResource("BoxShape3D_c2res")
+
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]

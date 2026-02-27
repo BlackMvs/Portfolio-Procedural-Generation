@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://sr2np0vfngot"]
+
+[ext_resource type="PackedScene" uid="uid://wj80r5msd3yv" path="res://!ProceduralGenerator/Assets/KayKit_BlockBits_1.0_FREE/Assets/gltf/dirt_with_grass.gltf" id="1_cqpd7"]
+
+[node name="dirt_with_grass2" instance=ExtResource("1_cqpd7")]

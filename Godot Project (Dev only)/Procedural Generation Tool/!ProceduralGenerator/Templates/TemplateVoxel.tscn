@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://3tcg1d2ysid5"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_xgo5n"]
+
+[sub_resource type="BoxOccluder3D" id="BoxOccluder3D_xgo5n"]
+
+[node name="TemplateVoxel" type="StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_xgo5n")
+
+[node name="OccluderInstance3D" type="OccluderInstance3D" parent="."]
+occluder = SubResource("BoxOccluder3D_xgo5n")

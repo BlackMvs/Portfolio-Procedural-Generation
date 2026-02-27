@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="TerrainLayer" format=3 uid="uid://dm15xxgllybii"]
+
+[ext_resource type="Script" uid="uid://lmxamah3v0vj" path="res://!ProceduralGenerator/TerrainDefaults/!TerrainLayer.gd" id="1_dvocp"]
+
+[resource]
+script = ExtResource("1_dvocp")
+layer_name = "Deep"
+min_depth = 5
+metadata/_custom_type_script = "uid://lmxamah3v0vj"

@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://75etscg7l36c"]
+
+[ext_resource type="PackedScene" uid="uid://3tcg1d2ysid5" path="res://!ProceduralGenerator/Templates/TemplateVoxel.tscn" id="1_d0u7h"]
+[ext_resource type="PackedScene" uid="uid://ds47vt8coevwx" path="res://!ProceduralGenerator/Assets/Imported Scenes/dirt_2.tscn" id="2_njs4h"]
+
+[node name="Dirt_01" unique_id=2000198311 instance=ExtResource("1_d0u7h")]
+
+[node name="dirt2" parent="." index="2" unique_id=477670178 instance=ExtResource("2_njs4h")]
+transform = Transform3D(0.51, 0, 0, 0, 0.51, 0, 0, 0, 0.51, 0, 0, 0)
+
+[editable path="dirt2"]
